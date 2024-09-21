@@ -63,7 +63,8 @@ SELECT
 	*
 FROM netflix
 WHERE type = 'Movie'
-ORDER BY SPLIT_PART(duration, ' ', 1)::INT DESC
+AND
+	duration = (SELECT MAX(duration) from netflix)
 
 
 -- 6. Find content added in the last 5 years
