@@ -17,7 +17,7 @@ from (
 	type, 
         rating,
 	count (*),
-	RANK() OVER(PARTITION BY type ORDER BY count(*)DESC as ranking
+	RANK() OVER(PARTITION BY type ORDER BY count(*)DESC) as ranking
    FROM Netflix
 	Group by 1,2 
 ) as t1
