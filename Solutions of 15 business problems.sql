@@ -28,7 +28,7 @@ from (
 
 SELECT * 
 FROM netflix
-WHERE release_year = 2020
+WHERE release_year = 2020 AND TYPE= 'Movie'
 
 
 -- 4. Find the top 5 countries with the most content on Netflix
